@@ -14,16 +14,17 @@ use the fonts in other ways in the font hierarchy etc. */
 
 /* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+  --bg-color: #62a1e4; /* Primary-color 1*/
+  --link-color: #c81404; /* Accent color 2 */
+  --link-hover-color: #2f2f2f; /* Secondary-color 1 */
+  --color-4: #c0c0c0;
+  --color-5: #6b7246;
 
   --primary-font: "Open Sans", sans-serif;
   --secondary-font: "Droid Serif", serif;
   --main-text-color: #000;
-
+  --jost: "Jost", sans-serif;
+  --libre: "Libre Baskerville", serif;
   --white-space: 1rem;
 }
 
@@ -35,7 +36,6 @@ a {
 }
 button:hover {
   background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
 }
 
 button:active {
@@ -44,7 +44,6 @@ button:active {
 
 a:hover {
   color: var(--link-hover-color);
-  font-size: 4rem;
 }
 html {
   font-size: 100%;
@@ -63,19 +62,24 @@ footer {
   margin: 0 auto;
   padding: calc(2 * var(--white-space));
 }
-
+header {
+  padding: 2vw;
+}
 .full-width {
-  background: var(--bg-color);
+  background: #0c498b;
   color: white;
   width: 100%;
 }
 
 .header-wrapper h1 {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-family: var(--libre);
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: -2px;
   padding-right: 0.75em;
-  font-weight: bold;
+  /*   font-weight: bold;
+ */
   color: white;
 }
 
@@ -278,11 +282,5 @@ footer {
 
   .textures li {
     height: 15vw;
-  }
-}
-
-@media (min-width: 900px) {
-  .adjectives ul {
-    flex-direction: row;
   }
 }
